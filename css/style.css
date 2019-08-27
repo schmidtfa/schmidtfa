@@ -316,7 +316,8 @@ ul{
     display: block;
   }
   .menu{
-    position: fixed;
+    position: absolute;
+    z-index: 111;
     width: 100%;
     height: 100vh;
     background: #333;
