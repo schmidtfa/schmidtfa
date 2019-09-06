@@ -33,11 +33,11 @@ ul{
 
 .menu{
   position: fixed;
-  right: 30px;
+  right: 20px;
 }
 
 .menu a{
-  color: white;
+  color: #b9b9b9;
   text-decoration: none;
   font-weight: 700;
   margin-left: 20px;
