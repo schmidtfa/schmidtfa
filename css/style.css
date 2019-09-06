@@ -33,7 +33,7 @@ ul{
 
 .menu{
   position: fixed;
-  right: 20px;
+  right: 30px;
 }
 
 .menu a{
@@ -47,7 +47,7 @@ ul{
 }
 
 .show-menu-btn, .hide-menu-btn{
-  color: white;
+  color: #b9b9b9;
   font-size: 20px;
   transition: 0.4s;
   cursor: pointer;
@@ -63,7 +63,7 @@ ul{
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover{
-  color:#b9b9b9;
+  color: white;
 }
 
 #chk{
