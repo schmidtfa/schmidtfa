@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/067d33033c.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="viewport" content="width-device-width; initial-scale=1;">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Contact - Fabian Schmidt</title>
+</head>
+
+<body>
+  <div class="navbar">
+
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">Publications</a>
+      <a href="resources.html">Resources</a>
+      <a href="#">Curriculum Vitae</a>
+      <a href="contact.html">Contact</a>
+      <label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+
+  </div>
+
+  <div class="business-card middle">
+
+    <div class="front">
+    <h2>Fabian Schmidt</h2>
+    <span>PhD Student</span>
+
+    <ul class="contact-info">
+      <li><i class="fas fa-envelope"></i> Fabian.Schmidt@sbg.ac.at</li>
+      <li><i class="fas fa-map-marker-alt"></i> Salzburg, Austria</li>
+    </ul>
+
+    </div>
+
+    <div class="back">
+    <span>Fabian Schmidt</span>
+    </div>
+  </div>
+
+<script>
+  $(".business-card").click(function(){
+    $(".business-card").toggleClass("business-card-active");
+  });
+</script>
+
+
+</body>
+
+</html>
