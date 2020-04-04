@@ -1,0 +1,54 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #333;
+  color: white;
+}
+
+#logo{
+  margin-top: 4rem;
+}
+
+
+#connectome path:nth-child(1){
+  stroke-dasharray: 1895.787;
+  stroke-dashoffset: 1895.787;
+  animation: line-anim 2s ease forwards;
+
+}
+
+#connectome path:nth-child(2){
+  stroke-dasharray: 8221.980;
+  stroke-dashoffset: 8221.980;
+  animation: line-anim 8s ease forwards 2s;
+}
+
+#dots ellipse{
+  opacity: 0;
+  animation: hideshow 5s ease forwards 10s;
+}
+
+#links a{
+  opacity: 0;
+  animation: hideshow 5s ease forwards 11s;
+}
+
+#links a:hover{
+  transform: rotate(0.5deg);
+}
+
+@keyframes line-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hideshow {
+    0% { opacity: 0; }
+    10% { opacity: 0; }
+    15% { opacity: 1; }
+    100% { opacity: 1; }
+}
