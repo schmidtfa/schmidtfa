@@ -25,9 +25,9 @@
   animation: hideshow 5s ease forwards 11s;
 }
 
-#links a:hover{
+/*#links a:hover{
   transform: rotate(0.5deg);
-}
+}*/
 
 @keyframes line-anim{
   to{
