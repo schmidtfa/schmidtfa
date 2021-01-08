@@ -39,9 +39,11 @@ a:hover {
 
 img { max-width: 100%, }
 
-.rounded-circle {width: 20rem;
-                 height: 20rem; 
-                 margin: 6rem;}
+.rounded-circle {position: relative;
+                 height: 50%; 
+                 margin: 10%;
+                 margin-left: auto;
+                 margin-right: auto;}
 
 .cover-container {
   max-width: 56rem;
