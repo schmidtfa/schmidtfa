@@ -7,6 +7,8 @@ main {
   align-items: center;
 }
 
+
+/* Brain animation */
 #connectome path:nth-child(1){
   stroke-dasharray: 1895.787;
   stroke-dashoffset: 1895.787;
