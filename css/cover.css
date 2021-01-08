@@ -1,7 +1,7 @@
 /*
  * Globals
  */
- body {
+ /*body {
   padding: 0;
   margin: 0;
   width: 100%;
@@ -9,6 +9,31 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #333;
   color: white;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+/*body {
+  height: 100%;
+  background-color: #333;
+}*/
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 /* Links */
@@ -26,27 +51,6 @@ a:hover {
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-html,
-/*body {
-  height: 100%;
-  background-color: #333;
-}*/
-
-body {
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 
@@ -90,14 +94,14 @@ img { max-width: 100%, }
   border-bottom-color: #fff;
 }
 
-/*@media (min-width: 48em) {
+@media (min-width: 48em) {
   .masthead-brand {
     float: left;
   }
   .nav-masthead {
     float: right;
   }
-}*/
+}
 /*
  * Cover
  */
