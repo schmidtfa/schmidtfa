@@ -12,7 +12,7 @@
 #connectome path:nth-child(2){
   stroke-dasharray: 8221.980;
   stroke-dashoffset: 8221.980;
-  animation: line-anim 2s ease forwards 1s;
+  animation: line-anim 2s ease forwards .5s;
 }
 
 #dots ellipse{
