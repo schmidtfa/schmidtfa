@@ -17,7 +17,7 @@
 
 #dots ellipse{
   opacity: 0;
-  animation: hideshow 2s ease forwards 3s;
+  animation: hideshow 1s ease forwards 3s;
 }
 
 #links a{
