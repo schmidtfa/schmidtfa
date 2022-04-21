@@ -5,24 +5,24 @@
 #connectome path:nth-child(1){
   stroke-dasharray: 1895.787;
   stroke-dashoffset: 1895.787;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 1s ease forwards;
 
 }
 
 #connectome path:nth-child(2){
   stroke-dasharray: 8221.980;
   stroke-dashoffset: 8221.980;
-  animation: line-anim 8s ease forwards 2s;
+  animation: line-anim 4s ease forwards 1s;
 }
 
 #dots ellipse{
   opacity: 0;
-  animation: hideshow 5s ease forwards 10s;
+  animation: hideshow 5s ease forwards 6s;
 }
 
 #links a{
   opacity: 0;
-  animation: hideshow 5s ease forwards 11s;
+  animation: hideshow 5s ease forwards 7s;
 }
 
 /*#links a:hover{
