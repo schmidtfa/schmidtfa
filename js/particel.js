@@ -74,7 +74,7 @@ myImage.addEventListener('load', function(){
             this.angle+= this.speed/20;
             
  
-            if (counter % 33 === 0){
+            if (counter % 44 === 0){
                 this.x = Math.random() * 4 * canvas.width;
                 this.y = 0;
             }
