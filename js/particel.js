@@ -6,6 +6,16 @@ myImage.addEventListener('load', function(){
     const canvas = document.getElementById('canvas1');
     canvas.width = 400;
     canvas.height = 400;
+
+    let switcher = 1;
+    let counter = 0;
+    setInterval(function(){
+        counter++;
+        if (counter % 12 == 0){
+            switcher *= -1;
+        }
+    }, 500);
+
     const ctx = canvas.getContext('2d');
     ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
     const pixels = ctx.getImageData(0,0,canvas.width, canvas.height);
@@ -25,6 +35,7 @@ myImage.addEventListener('load', function(){
             const brightness = calcRelBrightness(red, green, blue)
             const cell = [
                 cellBrightness = brightness,
+                cellColor = 'rgb(' + red + ',' + green + ',' + blue + ')'
             ];
             row.push(cell);
         }
@@ -50,23 +61,43 @@ myImage.addEventListener('load', function(){
             this.size = Math.random() * .5 + 1;
             this.Position1 = Math.floor(this.y);
             this.Position2 = Math.floor(this.x);
+            this.angle = 0;
         }
         update(){
 
             this.Position1 = Math.floor(this.y);
             this.Position2 = Math.floor(this.x);
-            this.speed = mappedImage[this.Position1][this.Position2][0];
+            if ((mappedImage[this.Position1]) && (mappedImage[this.Position1][this.Position2])){
+                this.speed = mappedImage[this.Position1][this.Position2][0];
+            }
             let movement = (2.5 - this.speed) + this.velocity;
+            this.angle+= this.speed/20;
+            
+ 
+            if (counter % 33 === 0){
+                this.x = Math.random() * 4 * canvas.width;
+                this.y = 0;
+            }
 
-            this.y+= movement;
-            if (this.y >= canvas.height){
+            //this.y+= movement + Math.cos(this.angle) *  2;
+            this.x+= movement + Math.sin(this.angle) *  3;
+            if (this.x >= canvas.width){
+                this.x = 0;
+                this.y = Math.random() * canvas.width;
+            }
+            if (this.y >= canvas.width){
                 this.y = 0;
                 this.x = Math.random() * canvas.width;
             }
+            
         }
         draw(){
             ctx.beginPath();
-            ctx.fillStyle = 'white';
+            if ((mappedImage[this.Position1]) && (mappedImage[this.Position1][this.Position2])){
+
+            ctx.fillStyle = mappedImage[this.Position1][this.Position2][1]
+
+            }
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
             ctx.fill();
         }
@@ -80,13 +111,14 @@ myImage.addEventListener('load', function(){
     init();
 
     function animate(){
-        ctx.globalAlpha = 0.2;
+        ctx.globalAlpha = 0.1;
         ctx.fillStyle = 'rgb(51, 51, 51)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         for (let i = 0; i < particlesArray.length; i++){
-        particlesArray[i].update();
-        ctx.globalAlpha = particlesArray[i].speed * 0.5;
-        particlesArray[i].draw();
+        
+            particlesArray[i].update();
+            ctx.globalAlpha = particlesArray[i].speed * 0.1;
+            particlesArray[i].draw();
         }
         requestAnimationFrame(animate);
     }
